@@ -1,0 +1,104 @@
+﻿
+#feedbackContainer {
+    font-size: .75em;
+}
+
+#feedbackNewEntries input.feedbackNewEntryTextBox {
+    margin: 10px;
+    width: 90%;
+}
+
+div.feedbackThread input.feedbackNewEntryTextBox {
+    width: 100%;
+}
+
+div.feedbackThread {
+    margin: 10px;
+    padding: 0px 5px 5px 5px;
+    background-color:#E7F0F7;
+    border: 1px solid #D7E0E7;
+    border-radius: 3px;
+}
+
+div.feedbackItem {
+    margin: 10px 0px 10px 0px;
+    border-bottom: 1px solid #FFF;
+}
+
+div.feedbackItem_header {
+    margin-bottom: 5px;
+}
+
+div.feedbackItem_commenter {
+    display:inline;
+    color: #F60;
+    font-weight:bold;
+}
+
+div.feedbackItem_commentDate {
+    display: inline;
+    color: #AAA;
+    padding-left: 5px;
+}
+
+div.feedbackItem_commentText {
+    margin: 5px 0px 5px 0px;
+    color: #333;
+    line-height: 1.2em;
+}
+
+div.feedbackItem_links {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+div.feedbackItem_links a {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #006699;
+}
+
+a.awesomeButton {
+    background: #069 url(images/tall-gradient.png) repeat-x;
+    display: inline-block;
+    padding: 3px 10px 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    border-bottom: 1px solid #222;
+    position: relative;
+    cursor: pointer;
+}
+
+a.feedbackThreadReplyLink {
+    padding: 3px 15px 4px;
+    margin: 0px 5px 5px 0px;
+}
+
+div.editThreadLinks {
+    text-align: right;
+}
+
+div.feedbackNewItemLinks {
+    text-align: right;
+}
+
+a.feedbackNewItemSave {
+    padding: 3px 15px 4px;
+}
+
+#feedbackNewEntries div.feedbackNewItemLinks a {
+    margin-right: 10px;
+}
+
+div.feedbackThread div.feedbackNewItemLinks a {
+    margin: 10px 5px 10px 5px;
+}
+
+a.feedbackNewItemCancel {
+    color: #006699;
+}
