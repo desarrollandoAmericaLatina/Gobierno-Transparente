@@ -71,7 +71,9 @@ proc update_asist {table fecha db} {
     if {$row eq {}} {continue}
     foreach {nombre citaciones asist asist_per faltca faltca_per faltsa
 		faltsa_per licencias pasajes} $row {break}
-    $db eval {insert into asist values($fecha, $cuerpo, $nombre, $citaciones, $asist,
+    foreach {nombre apellido} [split [string tolower $nombre] ","] {break}
+    set apellido [string trim $apellido]
+    $db eval {insert into asist values($fecha, $cuerpo, $nombre, $apellido, $citaciones, $asist,
 		$faltca, $faltsa, $licencias, $pasajes);}
   }
 }
