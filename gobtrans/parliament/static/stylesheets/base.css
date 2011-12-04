@@ -246,6 +246,9 @@ footer a:hover {
   padding-top: 0.4em;
   margin-bottom: 0.4em;
 }
+.attendance-ranking li .info {
+  float: left;
+}
 .attendance-ranking li a {
   display: block;
   overflow: auto;
@@ -294,17 +297,24 @@ footer a:hover {
 		width: 1500px;
 	}
 }
-@media screen and (max-width: 1200px) { 
+@media screen and (max-width: 1250px) { 
 	.wrapper,
 	section {
 		width: 90%;
 	}
+  .attendance-ranking li .info {
+    float: none;
+    clear: both;
+  }
 }
-@media screen and (max-width: 700px) { 
+@media screen and (max-width: 700px) {
 	.wrapper section {
 		width: 100%;
 		float: none;
 	}
+  .global-wrapper {
+    width: 630px;
+  }
 }
 
 /* IE ************************************************/
