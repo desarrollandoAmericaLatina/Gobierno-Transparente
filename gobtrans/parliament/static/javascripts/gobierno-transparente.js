@@ -71,7 +71,7 @@ $(document).ready(function() {
       },
       yAxis: {
          title: {
-            text: 'Asistencia'
+            text: 'Inasistencia'
          },
          plotLines: [{
             value: 0,
