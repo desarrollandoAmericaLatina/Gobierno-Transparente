@@ -14,7 +14,7 @@
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Mako'>
   <link rel="stylesheet" href="media/stylesheets/html5-reset.css"/>
   <link rel="stylesheet" href="media/stylesheets/base.css"/>
-  <link rel="stylesheet" href="media/stylesheets/jquery.fancybox-1.3.4.css"/>
+  <link rel="stylesheet" href="http://fancybox.net/js/fancybox-1.3.4/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -59,7 +59,7 @@
     <h1>Parlamentarios con <strong class="good">mejor</strong> asistencia</h1>
     <ul>
       <li>
-        <a href="#">
+        <a class="lightbox" href="#best1">
           <img src="media/images/content/parlamentario.jpg" alt="nombre"/>
           <h2>Nombre</h2>
           <p class="good">
@@ -69,7 +69,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a class="lightbox" href="#best2">
           <img src="media/images/content/parlamentario.jpg" alt="nombre"/>
           <h2>Nombre</h2>
           <p class="good">
@@ -79,7 +79,7 @@
         </a>
       </li>
       <li class="last">
-        <a href="#">
+        <a class="lightbox" href="#best3">
           <img src="media/images/content/parlamentario.jpg" alt="nombre"/>
           <h2>Nombre</h2>
           <p class="good">
@@ -95,9 +95,9 @@
     <h1>Parlamentarios con <strong class="bad">peor</strong> asistencia</h1>
     <ul>
       <li>
-        <a href="#">
+        <a class="lightbox" href="#worst1">
           <img src="media/images/content/parlamentario.jpg" alt="nombre"/>
-          <h2>Nombre</h2>
+          <h2>Nombre Lala</h2>
           <p class="bad">
             <span class="number">100%</span> 
             <span>de asistencias</span>
@@ -105,7 +105,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a class="lightbox" href="#worst2">
           <img src="media/images/content/parlamentario.jpg" alt="nombre"/>
           <h2>Nombre</h2>
           <p class="bad">
@@ -115,7 +115,7 @@
         </a>
       </li>
       <li class="last">
-        <a href="#">
+        <a class="lightbox" href="#worst3">
           <img src="media/images/content/parlamentario.jpg" alt="nombre"/>
           <h2>Nombre</h2>
           <p class="bad">
@@ -186,9 +186,34 @@
     </ul>
   </footer>
 
+  <div style="display:none">
+    <div id="best1">
+      <div id="best1_chart"></div>
+    </div>
+    <div id="best2">
+      <div id="best2_chart"></div>
+    </div>
+    <div id="best3">
+      <div id="best3_chart"></div>
+    </div>
+    <div id="worst1">
+      <div id="worst1_chart"></div>
+    </div>
+    <div id="worst2">
+      <div id="worst2_chart"></div>
+    </div>
+    <div id="worst3">
+      <div id="worst3_chart"></div>
+    </div>
+  </div>
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   <script src="media/javascripts/highcharts.js"></script>
   <script src="media/javascripts/jquery.fancybox-1.3.4.pack.js"></script>
   <script src="media/javascripts/gobierno-transparente.js"></script>
+  <script src="http://fancybox.net/js/fancybox-1.3.4/jquery.fancybox-1.3.4.js"></script>
+  <script>
+
+  </script>
 </body>
 </html>
