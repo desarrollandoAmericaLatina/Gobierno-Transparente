@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # vim: tw=80
-from django.db.models import (BooleanField, CharField, DatField, DateTimeField,
-                              ForeignKey, ImageField, Model, OneToOneField,
-                              PositiveIntegerField, TextField,)
+from django.db.models import (BooleanField, CharField, DateField,
+                              DateTimeField, ForeignKey, ImageField, Model,
+                              OneToOneField, PositiveIntegerField, TextField,)
 
 from django.utils.translation import ugettext_lazy as _
 
@@ -86,7 +86,7 @@ class Senator(Model):
         return self.parliamentary.__unicode__()
 
     class Meta:
-        unique_toghether = (('legislature', 'parliamentary', 'party',),)
+        unique_together = (('legislature', 'parliamentary', 'party',),)
         verbose_name = _(u'senator')
         verbose_name_plural = _(u'senators')
 
@@ -106,7 +106,7 @@ class Deputy(Model):
         return self.parliamentary.__unicode__()
 
     class Meta:
-        unique_toghether = (('legislature', 'parliamentary', 'party',),)
+        unique_together = (('legislature', 'parliamentary', 'party',),)
         verbose_name = _(u'deputy')
         verbose_name_plural = _(u'deputies')
 
@@ -180,7 +180,7 @@ class Citation(Model):
         return self.session.__unicode__()
 
     class Meta:
-        unique_toghether = (('session', 'parliamentary'),)
+        unique_together = (('session', 'parliamentary'),)
         verbose_name = _(u'citation')
         verbose_name_plural = _(u'citations')
 
@@ -215,7 +215,7 @@ class License(Model):
         return unicode(self.pk)
 
     class Meta:
-        unique_toghether = (('parliamentary', 'from_date'),
+        unique_together = (('parliamentary', 'from_date'),
                             ('parliamentary', 'to_date'))
         verbose_name = _(u'license')
         verbose_name_plural = _(u'licenses')
