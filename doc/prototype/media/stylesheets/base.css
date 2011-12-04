@@ -20,6 +20,10 @@ h1, h2, h3 {
 h1 {
   font-size: 1.5em;
   line-height: 1em;
+  text-shadow: 0 1px 0 black;
+}
+section h1 {
+  text-shadow: 0 1px 0 white;
 }
 h2 {
   font-size: 1.375em;
