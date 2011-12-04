@@ -7,8 +7,9 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Legislature(Model):
-    """Una legislatura es un período de gobierno, la cual a su vez consta de
-    períodos que son anuales."""
+    """A legislature is a 5 year government. It contains Periods which are
+    yearly.
+    """
 
     number = PositiveIntegerField(_(u'number'))
     from_year = PositiveIntegerField(_(u'from year'))
@@ -23,7 +24,8 @@ class Legislature(Model):
 
 
 class Period(Model):
-    """
+    """Every year begins a new Period. On the year of the elections the period
+    begins on march, the other 4 years it begins on freburary.
     """
 
     legislature = ForeignKey(Legislature, verbose_name=_(u'period'),
@@ -37,7 +39,7 @@ class Period(Model):
 
 
 class Party(Model):
-    """
+    """A political party.
     """
 
     name = CharField(_(u'party'), max_length=128)
@@ -51,7 +53,8 @@ class Party(Model):
 
 
 class Parliamentary(Model):
-    """
+    """A parliamentary is a person. It's not Senator nor Deputy by itself, that
+    depends on the Legislature and Parliamentary relation.
     """
 
     name = CharField(_(u'name'), max_length=128)
@@ -104,7 +107,7 @@ class Deputy(Model):
 
 
 class Substitution(Model):
-    """
+    """A substitution of a parliamentary.
     """
 
     SENATE = '0'
@@ -204,6 +207,7 @@ class License(Model):
         verbose_name_plural = _(u'licenses')
 
 
+# FIXME:
 class Issue(Model):
     """
     """
