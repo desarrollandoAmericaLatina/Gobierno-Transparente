@@ -11,6 +11,7 @@ from django.core.management import setup_environ
 
 setup_environ(settings)
 
+from django.db.utils import IntegrityError
 from parliament.models import Parliamentary, Legislature, Senator, Deputy, \
                               Party, Substitution, Period, Session, Citation, \
                               Absence
@@ -34,15 +35,27 @@ def usage():
 
 def parse_periods(periods, session_chamber, name_ids):
     for period_entry in periods:
-        period, c = Period.objects.get_or_create(legislature=legislature,
-                                                 from_date=datetime.strptime(period_entry[0]['fecha'], TIME_FMT),
-                                                 to_date=datetime.strptime(period_entry[-1]['fecha'], TIME_FMT))
+        try:
+            period, c = Period.objects.get_or_create(legislature=legislature,
+                                                     from_date=datetime.strptime(period_entry[0]['fecha'], TIME_FMT),
+                                                     to_date=datetime.strptime(period_entry[-1]['fecha'], TIME_FMT))
+        except IntegrityError:
+            continue
 
         for session_entry in period_entry:
             session, c = Session.objects.get_or_create(period=period,
                                                        chamber=session_chamber,
                                                        internal_id=int(session_entry['nro']),
                                                        date=datetime.strptime(session_entry['fecha'], TIME_FMT))
+
+            for name in session_entry['Asisten']:
+                if name not in name_ids:
+                    continue
+                try:
+                    citation, c = Citation.objects.get_or_create(session=session, parliamentary=Parliamentary.objects.get(id_parliament=name_ids[name]))
+                except Parliamentary.DoesNotExist:
+                    print 'Couldnt find', name, name_ids[name], 'in the model.'
+                    continue
 
             for name in session_entry['Faltan con']:
                 if name not in name_ids:
@@ -70,6 +83,19 @@ def parse_periods(periods, session_chamber, name_ids):
             #    citation, c = Citation.objects.get_or_create(session=session, Parliamentary.objects.get(id_parliament=name_ids[name]))
             #    license, c = License.objects.get_or_create(citation=citation)
 
+
+def flatten_periods(data):
+    periods = []
+    for big in data:
+        prev = None
+        for small in big:
+            if prev is None or prev['nro'] >= small['nro']:
+                periods.append([small])
+            else:
+                periods[-1].append(small)
+            prev = small
+    return periods
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         usage()
@@ -87,10 +113,14 @@ if __name__ == '__main__':
     with open(os.path.join(DATA_PATH, MEMBERS_FILE)) as f:
         substitutes = json.load(f)
         for entry in members:
-            p, c = Parliamentary.objects.get_or_create(id_parliament=entry['id'],
-                                                    picture = os.path.join(PICTURES_PATH, 'Fot' + entry['id'] + '.jpg'),
-                                                    first_name = entry['nombre'],
-                                                    last_name = entry['apellido'])
+            try:
+                p = Parliamentary.objects.get(id_parliament=entry['id'])
+            except:
+                p = Parliamentary(id_parliament=entry['id'],
+                                  picture = os.path.join(PICTURES_PATH, 'Fot' + entry['id'] + '.jpg'),
+                                  first_name = entry['nombre'],
+                                  last_name = entry['apellido'])
+                p.save()
 
             party, c = Party.objects.get_or_create(name=entry['partido'])
 
@@ -158,6 +188,7 @@ if __name__ == '__main__':
             attendance = json.loads(json.load(att_f))
             name_ids = json.load(names_f)
 
-            parse_periods(attendance['senadores'], Session.SENATE, name_ids)
-            parse_periods(attendance['representantes'], Session.DEPUTY, name_ids)
+
+            parse_periods(flatten_periods(attendance['senadores']), Session.SENATE, name_ids)
+            parse_periods(flatten_periods(attendance['representantes']), Session.DEPUTY, name_ids)
 

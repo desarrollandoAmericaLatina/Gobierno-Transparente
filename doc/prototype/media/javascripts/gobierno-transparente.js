@@ -6,7 +6,7 @@ var attendance;
 
 $(document).ready(function() {
   // Citations
-  citations = new Highcharts.Chart({
+  options =  {
       chart: {
          renderTo: 'citations',
          defaultSeriesType: 'column'
@@ -59,7 +59,8 @@ $(document).ready(function() {
          name: 'Inasistencias',
          data: [3, 4, 4, 2]
       }]
-   });
+   }
+  citations = new Highcharts.Chart(options);
 
    // Attendance
    attendance = new Highcharts.Chart({
@@ -110,8 +111,17 @@ $(document).ready(function() {
       }]
    });
 
+   // Personalized Graphs
+   //
+
+   $.each(['best1', 'best2', 'best3', 'worst1', 'worst2', 'worst3'], function(index, value) {
+      options.chart.renderTo = value + "_chart";
+      // options.series = $.ajax(...)
+      parameterized = new Highcharts.Chart(options);
+   });
+
    // Fancybox
-   $("#portfolio a").fancybox({
+   $("a.lightbox").fancybox({
      'speedIn' : 600,
      'speedOut' : 300, 
      'transitionIn' : 'elastic',
