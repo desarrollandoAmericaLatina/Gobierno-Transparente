@@ -116,7 +116,6 @@ $(document).ready(function() {
 
    $.each(['best1', 'best2', 'best3', 'worst1', 'worst2', 'worst3'], function(index, value) {
       options.chart.renderTo = value + "_chart";
-      alert(options.chart.renderTo);
       // options.series = $.ajax(...)
       parameterized = new Highcharts.Chart(options);
    });
