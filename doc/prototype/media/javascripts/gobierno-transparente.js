@@ -11,16 +11,17 @@ $(document).ready(function() {
          renderTo: 'citations',
          defaultSeriesType: 'column'
       },
-      title: {
-         text: 'Stacked column chart'
+      credits: {
+          enabled: false
       },
+      title: false,
       xAxis: {
-         categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+         categories: ['Partido Blanco', 'Partido Colorado', 'Frente Amplio', 'Partido Independiente']
       },
       yAxis: {
          min: 0,
          title: {
-            text: 'Total fruit consumption'
+            text: 'Citaciones'
          },
          stackLabels: {
             enabled: true,
@@ -29,17 +30,6 @@ $(document).ready(function() {
                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
             }
          }
-      },
-      legend: {
-         align: 'right',
-         x: -100,
-         verticalAlign: 'top',
-         y: 20,
-         floating: true,
-         backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColorSolid) || 'white',
-         borderColor: '#CCC',
-         borderWidth: 1,
-         shadow: false
       },
       tooltip: {
          formatter: function() {
@@ -57,15 +47,17 @@ $(document).ready(function() {
             }
          }
       },
-       series: [{
-         name: 'John',
-         data: [5, 3, 4, 7, 2]
+      colors: [
+        '#89A54E', 
+        '#AA4643' 
+      ],
+      series: [{
+         name: 'Asistencias',
+         data: [5, 3, 4, 7],
+         backgroundColor: 'green'
       }, {
-         name: 'Jane',
-         data: [2, 2, 3, 2, 1]
-      }, {
-         name: 'Joe',
-         data: [3, 4, 4, 2, 5]
+         name: 'Inasistencias',
+         data: [3, 4, 4, 2]
       }]
    });
 
@@ -73,25 +65,20 @@ $(document).ready(function() {
    attendance = new Highcharts.Chart({
       chart: {
          renderTo: 'attendance',
-         defaultSeriesType: 'line',
-         marginRight: 130,
-         marginBottom: 25
+         defaultSeriesType: 'line'
       },
-      title: {
-         text: 'Monthly Average Temperature',
-         x: -20 //center
+      credits: {
+          enabled: false
       },
-      subtitle: {
-         text: 'Source: WorldClimate.com',
-         x: -20
-      },
+      title: false,
       xAxis: {
          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
             'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
       },
       yAxis: {
          title: {
-            text: 'Temperature (Â°C)'
+            text: 'Asistencia'
          },
          plotLines: [{
             value: 0,
@@ -104,14 +91,6 @@ $(document).ready(function() {
                    return '<b>'+ this.series.name +'</b><br/>'+
                this.x +': '+ this.y +'Â°C';
          }
-      },
-      legend: {
-         layout: 'vertical',
-         align: 'right',
-         verticalAlign: 'top',
-         x: -10,
-         y: 100,
-         borderWidth: 0
       },
       series: [{
          name: 'Tokyo',
@@ -126,5 +105,16 @@ $(document).ready(function() {
          name: 'London',
          data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
       }]
-   }); 
+   });
+
+   // Fancybox
+   $("#portfolio a").fancybox({
+     'speedIn' : 600,
+     'speedOut' : 300, 
+     'transitionIn' : 'elastic',
+     'transitionOut' : 'elastic',
+     'opacity' : true,
+     'overlayShow' : false,
+     'titlePosition' : 'inside'
+   });
 });

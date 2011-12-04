@@ -24,6 +24,7 @@ h1 {
 }
 section h1 {
   text-shadow: 0 1px 0 white;
+  clear: both;
 }
 h2 {
   font-size: 1.375em;
@@ -45,10 +46,7 @@ em, i {font-style: italic;}
 /* links */
 a {
   text-decoration: none;
-  color: #006cc9;
-}
-a:hover {
-  text-decoration: underline;
+  color: #333333;
 }
 
 /* Buttons */
@@ -147,12 +145,11 @@ table th {
   text-transform: uppercase;
   color: #666666;
 }
-table .even td {
-	background-color: #f8f8f8;
+table td {
+	background-color: rgba(255, 255, 255, 0.5);
 }
-table .break td {
-	background-color: #ddffdd;
-	color: #439043;
+table .even td {
+	background-color: rgba(255, 255, 255, 0.15);
 }
 table tr:hover td {
   background-color: #ffffcc;
@@ -218,20 +215,79 @@ section {
 
 /* footer */
 footer {
-	background-color: rgba(255, 255, 255, 0.8);
-	border-top: 1px solid #dddedf;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-top: 1px solid #cecece;
 	font-size: 0.75em;
 	width: 100%;
+  overflow: auto;
 }
 footer li a {
 	float: left;
 	padding: 0.5em 1em;
-	color: #1e1e1e;
+	color: #666666;
 }
 
 /* Section Specific ************************************************/
 .citations {
   margin-right: 2%;
+}
+.attendance-ranking li {
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+  padding-bottom: 3em;
+}
+.attendance-ranking li.last {
+  margin-right: 0;
+}
+.attendance-ranking li h2 {
+  padding-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.attendance-ranking li a {
+  display: block;
+  overflow: auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.attendance-ranking li a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.attendance-ranking li a:hover img {
+  background: transparent;
+  border: 0;
+}
+.attendance-ranking li img {
+  float: left;
+  margin-right: 1em;
+  background-color: #ffffff;
+  padding: 0.5em;
+  border: 1px solid #cecece;
+  -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.attendance-ranking p span {
+  display: block;
+  font-size: 1.25em;
+}
+.attendance-ranking p span.number {
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: bold;
+}
+.good {
+  color: #89A54E;
+}
+.bad {
+  color: #AA4643;
 }
 
 /* Media Queries ************************************************/
