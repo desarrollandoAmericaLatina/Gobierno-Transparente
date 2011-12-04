@@ -47,9 +47,14 @@ $(document).ready(function() {
             }
          }
       },
-       series: [{
+      colors: [
+        '#89A54E', 
+        '#AA4643' 
+      ],
+      series: [{
          name: 'Asistencias',
-         data: [5, 3, 4, 7]
+         data: [5, 3, 4, 7],
+         backgroundColor: 'green'
       }, {
          name: 'Inasistencias',
          data: [3, 4, 4, 2]
