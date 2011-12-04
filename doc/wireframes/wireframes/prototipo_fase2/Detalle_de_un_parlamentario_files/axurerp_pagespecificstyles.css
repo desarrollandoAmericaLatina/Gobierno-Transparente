@@ -1,0 +1,1462 @@
+body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+div.main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0 {
+    position:absolute;
+    left:426px;
+    top:18px;
+    width:100px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u1 {
+    position:absolute;
+    left:500px;
+    top:18px;
+    width:100px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:220px;
+    top:14px;
+    width:180px;
+    height:22px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u3_original {
+    background-image: url('../Header_files/u3_original.png');
+}
+
+.u3_container {
+    position:absolute;
+    left:380px;
+    top:18px;
+    width:16px;
+    height:16px;
+}
+
+#u3_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u4 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u3 {
+    position:absolute;
+    left:380px;
+    top:18px;
+    width:16px;
+    height:16px
+}
+
+.u5 {
+    position:absolute;
+    left:10px;
+    top:16px;
+    width:220px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6_line {
+    background-image: url('../Header_files/u6_line.png');
+}
+
+.u6_line {
+    position:absolute;
+    left:10px;
+    top:49px;
+    width:890px;
+    height:3px;
+}
+
+.u6 {
+    position:absolute;
+    left:10px;
+    top:49px;
+    width:890px;
+    height:3px
+}
+
+.u8 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:250px;
+    height:260px
+}
+
+.u9_hover {
+    background-image: url('../Header_files/u9_hover.png');
+}
+
+.u9_disabled {
+    background-image: url('../Header_files/u9_disabled.png');
+}
+
+.u9_original {
+    background-image: url('../Header_files/u9_original.png');
+}
+
+.u9_container {
+    position:absolute;
+    left:53px;
+    top:90px;
+    width:146px;
+    height:43px;
+}
+
+#u9_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:152px;
+    height:49px;
+}
+
+.u10 {
+    position:absolute;
+    left:2px;
+    top:14px;
+    width:142px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u9 {
+    position:absolute;
+    left:53px;
+    top:90px;
+    width:146px;
+    height:43px
+}
+
+.u11_disabled {
+    background-image: url('../Header_files/u11_disabled.png');
+}
+
+.u11_original {
+    background-image: url('../Header_files/u11_original.png');
+}
+
+.u11_container {
+    position:absolute;
+    left:50px;
+    top:86px;
+    width:146px;
+    height:44px;
+}
+
+#u11_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:152px;
+    height:50px;
+}
+
+.u12 {
+    position:absolute;
+    left:2px;
+    top:14px;
+    width:142px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u11 {
+    position:absolute;
+    left:50px;
+    top:86px;
+    width:146px;
+    height:44px
+}
+
+.u13_hover {
+    background-image: url('../Header_files/u13_hover.png');
+}
+
+.u13_disabled {
+    background-image: url('../Header_files/u13_disabled.png');
+}
+
+.u13_original {
+    background-image: url('../Header_files/u13_original.png');
+}
+
+.u13_container {
+    position:absolute;
+    left:51px;
+    top:87px;
+    width:144px;
+    height:20px;
+}
+
+#u13_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:150px;
+    height:26px;
+}
+
+.u14 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13 {
+    position:absolute;
+    left:51px;
+    top:87px;
+    width:144px;
+    height:20px
+}
+
+.u15_hover {
+    background-image: url('../Header_files/u13_hover.png');
+}
+
+.u15_disabled {
+    background-image: url('../Header_files/u13_disabled.png');
+}
+
+.u15_original {
+    background-image: url('../Header_files/u13_original.png');
+}
+
+.u15_container {
+    position:absolute;
+    left:51px;
+    top:107px;
+    width:144px;
+    height:20px;
+}
+
+#u15_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:150px;
+    height:26px;
+}
+
+.u16 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15 {
+    position:absolute;
+    left:51px;
+    top:107px;
+    width:144px;
+    height:20px
+}
+
+.u17 {
+    position:absolute;
+    left:802px;
+    top:18px;
+    width:83px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18_original {
+    background-image: url('../Header_files/u18_original.png');
+}
+
+.u18_container {
+    position:absolute;
+    left:883px;
+    top:23px;
+    width:8px;
+    height:6px;
+}
+
+#u18_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:14px;
+    height:12px;
+}
+
+.u19 {
+    position:absolute;
+    left:2px;
+    top:-5px;
+    width:4px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18 {
+    position:absolute;
+    left:883px;
+    top:23px;
+    width:8px;
+    height:6px
+}
+
+.u20 {
+    position:absolute;
+    left:790px;
+    top:13px;
+    width:109px;
+    height:25px
+}
+
+.u21 {
+    position:absolute;
+    left:607px;
+    top:18px;
+    width:100px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u23 {
+    position:absolute;
+    left:10px;
+    top:70px;
+    width:330px;
+    height:18px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u24_line {
+    background-image: url('../Detalle_de_un_parlamentario_files/u24_line.png');
+}
+
+.u24_line {
+    position:absolute;
+    left:10px;
+    top:104px;
+    width:890px;
+    height:3px;
+}
+
+.u24 {
+    position:absolute;
+    left:10px;
+    top:104px;
+    width:890px;
+    height:3px
+}
+
+.u25_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u25_original.png');
+}
+
+.u25_container {
+    position:absolute;
+    left:10px;
+    top:120px;
+    width:110px;
+    height:110px;
+}
+
+#u25_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:116px;
+}
+
+.u26 {
+    position:absolute;
+    left:2px;
+    top:47px;
+    width:106px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25 {
+    position:absolute;
+    left:10px;
+    top:120px;
+    width:110px;
+    height:110px
+}
+
+.u27_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u27_original.png');
+}
+
+.u27_container {
+    position:absolute;
+    left:20px;
+    top:130px;
+    width:90px;
+    height:90px;
+}
+
+#u27_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:90px;
+    height:90px;
+}
+
+.u28 {
+    position:absolute;
+    left:2px;
+    top:37px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27 {
+    position:absolute;
+    left:20px;
+    top:130px;
+    width:90px;
+    height:90px
+}
+
+.u29 {
+    position:absolute;
+    left:130px;
+    top:120px;
+    width:210px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30 {
+    position:absolute;
+    left:130px;
+    top:140px;
+    width:360px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31_hover {
+    background-image: url('../Detalle_de_un_parlamentario_files/u31_hover.png');
+}
+
+.u31_disabled {
+    background-image: url('../Detalle_de_un_parlamentario_files/u31_disabled.png');
+}
+
+.u31_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u31_original.png');
+}
+
+.u31_container {
+    position:absolute;
+    left:130px;
+    top:204px;
+    width:140px;
+    height:25px;
+}
+
+#u31_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:146px;
+    height:31px;
+}
+
+.u32 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:136px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31 {
+    position:absolute;
+    left:130px;
+    top:204px;
+    width:140px;
+    height:25px
+}
+
+.u33_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u33_original.png');
+}
+
+.u33_container {
+    position:absolute;
+    left:150px;
+    top:208px;
+    width:17px;
+    height:16px;
+}
+
+#u33_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:17px;
+    height:16px;
+}
+
+.u34 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:13px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33 {
+    position:absolute;
+    left:150px;
+    top:208px;
+    width:17px;
+    height:16px
+}
+
+.u35 {
+    position:absolute;
+    left:708px;
+    top:208px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u36_original.png');
+}
+
+.u36_container {
+    position:absolute;
+    left:788px;
+    top:200px;
+    width:32px;
+    height:32px;
+}
+
+#u36_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:32px;
+    height:32px;
+}
+
+.u37 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:28px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36 {
+    position:absolute;
+    left:788px;
+    top:200px;
+    width:32px;
+    height:32px
+}
+
+.u38_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u38_original.png');
+}
+
+.u38_container {
+    position:absolute;
+    left:828px;
+    top:200px;
+    width:32px;
+    height:32px;
+}
+
+#u38_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:32px;
+    height:32px;
+}
+
+.u39 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:28px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u38 {
+    position:absolute;
+    left:828px;
+    top:200px;
+    width:32px;
+    height:32px
+}
+
+.u40_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u40_original.png');
+}
+
+.u40_container {
+    position:absolute;
+    left:868px;
+    top:200px;
+    width:32px;
+    height:32px;
+}
+
+#u40_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:32px;
+    height:32px;
+}
+
+.u41 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:28px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u40 {
+    position:absolute;
+    left:868px;
+    top:200px;
+    width:32px;
+    height:32px
+}
+
+.u42_hover {
+    background-image: url('../Detalle_de_un_parlamentario_files/u42_hover.png');
+}
+
+.u42_disabled {
+    background-image: url('../Detalle_de_un_parlamentario_files/u42_disabled.png');
+}
+
+.u42_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u42_original.png');
+}
+
+.u42_container {
+    position:absolute;
+    left:280px;
+    top:205px;
+    width:200px;
+    height:25px;
+}
+
+#u42_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:206px;
+    height:31px;
+}
+
+.u43 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:196px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42 {
+    position:absolute;
+    left:280px;
+    top:205px;
+    width:200px;
+    height:25px
+}
+
+.u44 {
+    position:absolute;
+    left:10px;
+    top:260px;
+    width:390px;
+    height:18px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u45_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u45_original.png');
+}
+
+.u45_container {
+    position:absolute;
+    left:10px;
+    top:290px;
+    width:890px;
+    height:26px;
+}
+
+#u45_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:896px;
+    height:32px;
+}
+
+.u46 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:886px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u45 {
+    position:absolute;
+    left:10px;
+    top:290px;
+    width:890px;
+    height:26px
+}
+
+.u47_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u47_original.png');
+}
+
+.u47_container {
+    position:absolute;
+    left:10px;
+    top:416px;
+    width:890px;
+    height:90px;
+}
+
+#u47_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:896px;
+    height:96px;
+}
+
+.u48 {
+    position:absolute;
+    left:2px;
+    top:37px;
+    width:886px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u47 {
+    position:absolute;
+    left:10px;
+    top:416px;
+    width:890px;
+    height:90px
+}
+
+.u49 {
+    position:absolute;
+    left:120px;
+    top:295px;
+    width:60px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u50 {
+    position:absolute;
+    left:20px;
+    top:295px;
+    width:100px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u51 {
+    position:absolute;
+    left:240px;
+    top:295px;
+    width:98px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u52 {
+    position:absolute;
+    left:120px;
+    top:336px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u53 {
+    position:absolute;
+    left:20px;
+    top:336px;
+    width:100px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u54 {
+    position:absolute;
+    left:240px;
+    top:336px;
+    width:420px;
+    height:64px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u55_hover {
+    background-image: url('../Detalle_de_un_parlamentario_files/u55_hover.png');
+}
+
+.u55_disabled {
+    background-image: url('../Detalle_de_un_parlamentario_files/u55_disabled.png');
+}
+
+.u55_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u55_original.png');
+}
+
+.u55_container {
+    position:absolute;
+    left:680px;
+    top:336px;
+    width:90px;
+    height:25px;
+}
+
+#u55_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:96px;
+    height:31px;
+}
+
+.u56 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:86px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u55 {
+    position:absolute;
+    left:680px;
+    top:336px;
+    width:90px;
+    height:25px
+}
+
+.u57_hover {
+    background-image: url('../Detalle_de_un_parlamentario_files/u57_hover.png');
+}
+
+.u57_disabled {
+    background-image: url('../Detalle_de_un_parlamentario_files/u57_disabled.png');
+}
+
+.u57_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u57_original.png');
+}
+
+.u57_container {
+    position:absolute;
+    left:780px;
+    top:336px;
+    width:110px;
+    height:25px;
+}
+
+#u57_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:31px;
+}
+
+.u58 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:106px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u57 {
+    position:absolute;
+    left:780px;
+    top:336px;
+    width:110px;
+    height:25px
+}
+
+.u59_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u59_original.png');
+}
+
+.u59_container {
+    position:absolute;
+    left:691px;
+    top:343px;
+    width:16px;
+    height:11px;
+}
+
+#u59_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:11px;
+}
+
+.u60 {
+    position:absolute;
+    left:2px;
+    top:-2px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u59 {
+    position:absolute;
+    left:691px;
+    top:343px;
+    width:16px;
+    height:11px
+}
+
+.u61_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u33_original.png');
+}
+
+.u61_container {
+    position:absolute;
+    left:790px;
+    top:340px;
+    width:17px;
+    height:16px;
+}
+
+#u61_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:17px;
+    height:16px;
+}
+
+.u62 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:13px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u61 {
+    position:absolute;
+    left:790px;
+    top:340px;
+    width:17px;
+    height:16px
+}
+
+.u63 {
+    position:absolute;
+    left:120px;
+    top:426px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u64 {
+    position:absolute;
+    left:20px;
+    top:426px;
+    width:100px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u65 {
+    position:absolute;
+    left:240px;
+    top:426px;
+    width:420px;
+    height:64px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66_hover {
+    background-image: url('../Detalle_de_un_parlamentario_files/u55_hover.png');
+}
+
+.u66_disabled {
+    background-image: url('../Detalle_de_un_parlamentario_files/u55_disabled.png');
+}
+
+.u66_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u55_original.png');
+}
+
+.u66_container {
+    position:absolute;
+    left:680px;
+    top:426px;
+    width:90px;
+    height:25px;
+}
+
+#u66_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:96px;
+    height:31px;
+}
+
+.u67 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:86px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66 {
+    position:absolute;
+    left:680px;
+    top:426px;
+    width:90px;
+    height:25px
+}
+
+.u68_hover {
+    background-image: url('../Detalle_de_un_parlamentario_files/u57_hover.png');
+}
+
+.u68_disabled {
+    background-image: url('../Detalle_de_un_parlamentario_files/u57_disabled.png');
+}
+
+.u68_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u57_original.png');
+}
+
+.u68_container {
+    position:absolute;
+    left:780px;
+    top:426px;
+    width:110px;
+    height:25px;
+}
+
+#u68_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:116px;
+    height:31px;
+}
+
+.u69 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:106px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u68 {
+    position:absolute;
+    left:780px;
+    top:426px;
+    width:110px;
+    height:25px
+}
+
+.u70_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u59_original.png');
+}
+
+.u70_container {
+    position:absolute;
+    left:691px;
+    top:433px;
+    width:16px;
+    height:11px;
+}
+
+#u70_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:11px;
+}
+
+.u71 {
+    position:absolute;
+    left:2px;
+    top:-2px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u70 {
+    position:absolute;
+    left:691px;
+    top:433px;
+    width:16px;
+    height:11px
+}
+
+.u72_original {
+    background-image: url('../Detalle_de_un_parlamentario_files/u33_original.png');
+}
+
+.u72_container {
+    position:absolute;
+    left:790px;
+    top:430px;
+    width:17px;
+    height:16px;
+}
+
+#u72_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:17px;
+    height:16px;
+}
+
+.u73 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:13px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72 {
+    position:absolute;
+    left:790px;
+    top:430px;
+    width:17px;
+    height:16px
+}
+
+.u74 {
+    position:absolute;
+    left:130px;
+    top:160px;
+    width:360px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
