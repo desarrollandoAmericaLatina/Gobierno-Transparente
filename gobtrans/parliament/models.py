@@ -156,13 +156,14 @@ class Session(Model):
     period = ForeignKey(Period, verbose_name=_(u'period'),
                         related_name='sessions')
     chamber = CharField(_(u'chamber'), max_length=1, choices=SESSION_CHAMBER)
-    internal_id = PositiveIntegerField(_(u'internal id'), unique=True)
+    internal_id = PositiveIntegerField(_(u'internal id'))
     date = DateField(_(u'date'))
 
     def __unicode__(self):
         return unicode(self.date)
 
     class Meta:
+        unique_together = (('period', 'internal_id'),)
         verbose_name = _(u'session')
         verbose_name_plural = _(u'sessions')
 
