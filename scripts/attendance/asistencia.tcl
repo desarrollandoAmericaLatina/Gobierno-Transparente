@@ -7,7 +7,7 @@ package require htmlparse
 
 load /usr/lib/tcltk/sqlite3/libtclsqlite3.so
 
-source "common.tcl"
+source "../../tcllib/common.tcl"
 
 interp recursionlimit {} 100000
 set current_legislatura 47
