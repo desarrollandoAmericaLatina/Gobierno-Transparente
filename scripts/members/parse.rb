@@ -14,23 +14,25 @@ def parse_td(td_s, partidos, bloque, offset=0)
                         :id => /.*Fot([0-9]+)\.jpg/.match(foto)[1] }
 end
 
-def nn(url)
-  bloque = nil
+def nn(urls)
   partidos = {}
 
-  doc = Nokogiri::HTML(open(url))
+  urls.each do |url|
+    doc = Nokogiri::HTML(open(url))
 
-  doc.xpath('//div/center/table[1]/tr').each do |p|
-    if (p.css('font[size="3"]').count > 0)
-      bloque = p.text.strip
-      partidos[bloque] = [] unless partidos.has_key?(bloque)
-    else
-      unless bloque.nil?
-        td_s = p.css('td')
-        if td_s[0].css('img').count > 0
-          parse_td(td_s, partidos, bloque)
-          if td_s.count > 3
-            parse_td(td_s, partidos, bloque, 3)
+    bloque = nil
+    doc.xpath('//div/center/table[1]/tr').each do |p|
+      if (p.css('font[size="3"]').count > 0)
+        bloque = p.text.strip
+        partidos[bloque] = [] unless partidos.has_key?(bloque)
+      else
+        unless bloque.nil?
+          td_s = p.css('td')
+          if td_s[0].css('img').count > 0
+            parse_td(td_s, partidos, bloque)
+            if td_s.count > 3
+              parse_td(td_s, partidos, bloque, 3)
+            end
           end
         end
       end
@@ -39,12 +41,17 @@ def nn(url)
   partidos.each do |key, value|
     partidos.delete(key) if value.empty?
   end
+
   partidos
 end
 
 result = {
-  :senador        => nn("http://www0.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=S&Legislatura=47&Tipo=T&xWidth="),
-  :representante  => nn("http://www0.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=D&Legislatura=47&Tipo=T&xWidth=")
+  :senador => nn([
+    "http://www0.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=S&Legislatura=47&Tipo=T&xWidth=",
+    "http://www0.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=S&Legislatura=47&Tipo=A&xWidth="]),
+  :representante => nn([
+    "http://www0.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=D&Legislatura=47&Tipo=T&xWidth=",
+    "http://www0.parlamento.gub.uy/palacio3/legisladores/conozcaasuslegisladores.asp?Cuerpo=D&Legislatura=47&Tipo=A&xWidth="])
 }
 
 strings = <<-SQL
