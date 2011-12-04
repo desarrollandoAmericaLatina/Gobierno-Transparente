@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-from django.db.models import Model, PositiveIntegerField
+from django.db.models import (BooleanField, CharField, DateTimeField,
+                              ForeignKey, ImageField, Model,
+                              PositiveIntegerField, TextField,)
+
+from django.utils.translation import ugettext_lazy as _
 
 
 class Legislature(Model):
@@ -13,6 +17,10 @@ class Legislature(Model):
     def __unicode__(self):
         return unicode(self.number)
 
+    class Meta:
+        verbose_name = _(u'legislature')
+        verbose_name_plural = _(u'legislatures')
+
 
 class Period(Model):
     """
@@ -22,6 +30,10 @@ class Period(Model):
                              related_name='periods')
     from_date = DateTimeField(_(u'from date'))
     to_date = DateTimeField(_(u'to date'))
+
+    class Meta:
+        verbose_name = _(u'period')
+        verbose_name_plural = _(u'periods')
 
 
 class Party(Model):
@@ -33,6 +45,10 @@ class Party(Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        verbose_name = _(u'party')
+        verbose_name_plural = _(u'parties')
+
 
 class Parliamentary(Model):
     """
@@ -43,6 +59,10 @@ class Parliamentary(Model):
 
     def __unicode__(self):
         return self.name
+
+    class Meta:
+        verbose_name = _(u'parliamentary')
+        verbose_name_plural = _(u'parliamentaries')
 
 
 class Senator(Model):
@@ -59,6 +79,10 @@ class Senator(Model):
     def __unicode__(self):
         return self.parliamentary.__unicode__()
 
+    class Meta:
+        verbose_name = _(u'senator')
+        verbose_name_plural = _(u'senators')
+
 
 class Deputy(Model):
     """
@@ -73,6 +97,10 @@ class Deputy(Model):
 
     def __unicode__(self):
         return self.parliamentary.__unicode__()
+
+    class Meta:
+        verbose_name = _(u'deputy')
+        verbose_name_plural = _(u'deputies')
 
 
 class Substitution(Model):
@@ -96,6 +124,10 @@ class Substitution(Model):
     def __unicode__(self):
         return self.parliamentary.__unicode__()
 
+    class Meta:
+        verbose_name = _(u'substitution')
+        verbose_name_plural = _(u'substitutions')
+
 
 class Session(Model):
     """
@@ -118,6 +150,10 @@ class Session(Model):
     def __unicode__(self):
         return unicode(self.date)
 
+    class Meta:
+        verbose_name = _(u'session')
+        verbose_name_plural = _(u'sessions')
+
 
 class Citation(Model):
     """
@@ -131,6 +167,10 @@ class Citation(Model):
     def __unicode__(self):
         return self.session.__unicode__()
 
+    class Meta:
+        verbose_name = _(u'citation')
+        verbose_name_plural = _(u'citations')
+
 
 class Absence(Model):
     """
@@ -142,6 +182,10 @@ class Absence(Model):
 
     def __unicode__(self):
         return self.citation.__unicode__()
+
+    class Meta:
+        verbose_name = _(u'absence')
+        verbose_name_plural = _(u'absences')
 
 
 class License(Model):
@@ -155,6 +199,10 @@ class License(Model):
     def __unicode__(self):
         return unicode(self.pk)
 
+    class Meta:
+        verbose_name = _(u'license')
+        verbose_name_plural = _(u'licenses')
+
 
 class Issue(Model):
     """
@@ -167,6 +215,10 @@ class Issue(Model):
     def __unicode__(self):
         return self.category
 
+    class Meta:
+        verbose_name = _(u'issue')
+        verbose_name_plural = _(u'issues')
+
 
 class Entry(Model):
     """
@@ -174,3 +226,7 @@ class Entry(Model):
 
     date = DateTimeField(_(u'date'))
     origin = CharField(_(u'origin'), max_length=128)
+
+    class Meta:
+        verbose_name = _(u'entry')
+        verbose_name_plural = _(u'entries')

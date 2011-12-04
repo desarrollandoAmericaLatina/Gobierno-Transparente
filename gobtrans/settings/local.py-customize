@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+ADMINS = (
+    # ('Your name', 'your@email.com'),
+)
+
+MANAGERS = ADMINS
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+
+TIME_ZONE = 'America/Montevideo'
+MEDIA_URL = '/media/'
+
+# For production use only. Uncomment and edit.
+# MEDIA_URL = 'http://media.gobtrans.com/'
+# STATIC_URL = 'http://static.gobtrans.com/'

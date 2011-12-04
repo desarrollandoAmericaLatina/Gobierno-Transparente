@@ -1,37 +1,33 @@
-# Django settings for gobtrans project.
+# -*- coding: utf-8 -*-
+from os.path import abspath, basename, dirname, join
+import sys
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+PROJECT_ABSOLUTE_DIR = dirname(abspath(__file__))[:-len('settings/')]
+if PROJECT_ABSOLUTE_DIR not in sys.path:
+    sys.path.append(PROJECT_ABSOLUTE_DIR)
 
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+PROJECT_NAME = basename(PROJECT_ABSOLUTE_DIR)
+APPS_DIR = join(PROJECT_ABSOLUTE_DIR, 'apps')
+if APPS_DIR not in sys.path:
+    sys.path.insert(0, APPS_DIR)
+
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+
+    'parliament',
 )
 
-MANAGERS = ADMINS
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
-
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
-TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-uy'
 
 SITE_ID = 1
 
@@ -106,19 +102,6 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-)
-
-INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
 
 # A sample logging configuration. The only tangible logging
