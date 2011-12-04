@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# vim: tw=80
 from django.db.models import (BooleanField, CharField, DateTimeField,
                               ForeignKey, ImageField, Model,
                               PositiveIntegerField, TextField,)
@@ -57,11 +58,13 @@ class Parliamentary(Model):
     depends on the Legislature and Parliamentary relation.
     """
 
-    name = CharField(_(u'name'), max_length=128)
+    id_parliament = CharField(u'id parliament', max_length=5)
+    first_name = CharField(_(u'first name'), max_length=128)
+    last_name = CharField(_(u'last name'), max_length=128)
     picture = ImageField(_(u'picture'), upload_to='parliamentaries')
 
     def __unicode__(self):
-        return self.name
+        return " ".join((self.first_name, self.last_name))
 
     class Meta:
         verbose_name = _(u'parliamentary')
@@ -119,10 +122,13 @@ class Substitution(Model):
 
     parliamentary = ForeignKey(Parliamentary, verbose_name=_(u'parliamentary'),
                                related_name='substitutions')
+    substitutes = ForeignKey(Parliamentary, verbose_name=_(u'substitutes'),
+                             related_name='substituted_by', blank=True, null=True)
     in_chamber = CharField(_(u'in chamber'), max_length=1,
                            choices=SUBSTITUTION_IN_CHAMBER)
-    from_date = DateTimeField(_(u'from date'))
-    to_date = DateTimeField(_(u'to date'))
+    from_date = DateTimeField(_(u'from date'), blank=True, null=True)
+    to_date = DateTimeField(_(u'to date'), blank=True, null=True)
+    reason = CharField(_(u'reason'), max_length=255)
 
     def __unicode__(self):
         return self.parliamentary.__unicode__()

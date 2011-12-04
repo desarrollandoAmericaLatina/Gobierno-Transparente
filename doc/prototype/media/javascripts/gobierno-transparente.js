@@ -6,21 +6,22 @@ var attendance;
 
 $(document).ready(function() {
   // Citations
-  citations = new Highcharts.Chart({
+  options =  {
       chart: {
          renderTo: 'citations',
          defaultSeriesType: 'column'
       },
-      title: {
-         text: 'Stacked column chart'
+      credits: {
+          enabled: false
       },
+      title: false,
       xAxis: {
-         categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+         categories: ['Partido Blanco', 'Partido Colorado', 'Frente Amplio', 'Partido Independiente']
       },
       yAxis: {
          min: 0,
          title: {
-            text: 'Total fruit consumption'
+            text: 'Citaciones'
          },
          stackLabels: {
             enabled: true,
@@ -29,17 +30,6 @@ $(document).ready(function() {
                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
             }
          }
-      },
-      legend: {
-         align: 'right',
-         x: -100,
-         verticalAlign: 'top',
-         y: 20,
-         floating: true,
-         backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColorSolid) || 'white',
-         borderColor: '#CCC',
-         borderWidth: 1,
-         shadow: false
       },
       tooltip: {
          formatter: function() {
@@ -57,41 +47,39 @@ $(document).ready(function() {
             }
          }
       },
-       series: [{
-         name: 'John',
-         data: [5, 3, 4, 7, 2]
+      colors: [
+        '#89A54E', 
+        '#AA4643' 
+      ],
+      series: [{
+         name: 'Asistencias',
+         data: [5, 3, 4, 7],
+         backgroundColor: 'green'
       }, {
-         name: 'Jane',
-         data: [2, 2, 3, 2, 1]
-      }, {
-         name: 'Joe',
-         data: [3, 4, 4, 2, 5]
+         name: 'Inasistencias',
+         data: [3, 4, 4, 2]
       }]
-   });
+   }
+  citations = new Highcharts.Chart(options);
 
    // Attendance
    attendance = new Highcharts.Chart({
       chart: {
          renderTo: 'attendance',
-         defaultSeriesType: 'line',
-         marginRight: 130,
-         marginBottom: 25
+         defaultSeriesType: 'line'
       },
-      title: {
-         text: 'Monthly Average Temperature',
-         x: -20 //center
+      credits: {
+          enabled: false
       },
-      subtitle: {
-         text: 'Source: WorldClimate.com',
-         x: -20
-      },
+      title: false,
       xAxis: {
          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
             'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
       },
       yAxis: {
          title: {
-            text: 'Temperature (Â°C)'
+            text: 'Asistencia'
          },
          plotLines: [{
             value: 0,
@@ -105,26 +93,41 @@ $(document).ready(function() {
                this.x +': '+ this.y +'Â°C';
          }
       },
-      legend: {
-         layout: 'vertical',
-         align: 'right',
-         verticalAlign: 'top',
-         x: -10,
-         y: 100,
-         borderWidth: 0
-      },
       series: [{
-         name: 'Tokyo',
-         data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+         name: 'faltca',
+         data: [8, 22, 10, 10, 48, 50, 38, 72, 2, 456, 4]
       }, {
-         name: 'New York',
-         data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+         name: 'citaciones',
+         data: [62, 557, 1267, 1044, 1987, 1721, 1696, 1882, 914, 2317, 463]
       }, {
-         name: 'Berlin',
-         data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+         name: 'pasajes',
+         data: [0, 0, 14, 12, 8, 0, 40, 32, 14, 48, 4]
       }, {
-         name: 'London',
-         data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+         name: 'licencias',
+         data: [4, 42, 126, 150, 285, 253, 342, 354, 164, 349, 75]
+      }, {
+         name: 'asist',
+         data: [46, 525, 1251, 1022, 1923, 1645, 1644, 1782, 908, 1843, 459]
       }]
-   }); 
+   });
+
+   // Personalized Graphs
+   //
+
+   $.each(['best1', 'best2', 'best3', 'worst1', 'worst2', 'worst3'], function(index, value) {
+      options.chart.renderTo = value + "_chart";
+      // options.series = $.ajax(...)
+      parameterized = new Highcharts.Chart(options);
+   });
+
+   // Fancybox
+   $("a.lightbox").fancybox({
+     'speedIn' : 600,
+     'speedOut' : 300, 
+     'transitionIn' : 'elastic',
+     'transitionOut' : 'elastic',
+     'opacity' : true,
+     'overlayShow' : false,
+     'titlePosition' : 'inside'
+   });
 });

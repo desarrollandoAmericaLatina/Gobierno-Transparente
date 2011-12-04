@@ -2,4 +2,3 @@
 local.py
 *.sw*
 *.pyc
-*.db

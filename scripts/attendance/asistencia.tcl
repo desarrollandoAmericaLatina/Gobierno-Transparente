@@ -7,7 +7,7 @@ package require htmlparse
 
 load /usr/lib/tcltk/sqlite3/libtclsqlite3.so
 
-source "common.tcl"
+source "../../tcllib/common.tcl"
 
 interp recursionlimit {} 100000
 set current_legislatura 47
@@ -71,7 +71,9 @@ proc update_asist {table fecha db} {
     if {$row eq {}} {continue}
     foreach {nombre citaciones asist asist_per faltca faltca_per faltsa
 		faltsa_per licencias pasajes} $row {break}
-    $db eval {insert into asist values($fecha, $cuerpo, $nombre, $citaciones, $asist,
+    foreach {nombre apellido} [split [string tolower $nombre] ","] {break}
+    set apellido [string trim $apellido]
+    $db eval {insert into asist values($fecha, $cuerpo, $nombre, $apellido, $citaciones, $asist,
 		$faltca, $faltsa, $licencias, $pasajes);}
   }
 }
@@ -93,7 +95,7 @@ proc trabajar {fecha} {
   set tree [struct::tree]
   htmlparse::2tree $html $tree
   set table [parse_asist $tree]
-  sqlite3 midb "asist.db"
+  sqlite3 midb "assist.db"
   update_asist $table $fecha midb
   midb close
   $tree destroy
