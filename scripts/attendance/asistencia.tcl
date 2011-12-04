@@ -93,7 +93,7 @@ proc trabajar {fecha} {
   set tree [struct::tree]
   htmlparse::2tree $html $tree
   set table [parse_asist $tree]
-  sqlite3 midb "asist.db"
+  sqlite3 midb "assist.db"
   update_asist $table $fecha midb
   midb close
   $tree destroy
