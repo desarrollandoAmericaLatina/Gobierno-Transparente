@@ -24,52 +24,56 @@
     _gaq.push(['_trackPageview']);
 
     (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
   </script>
   -->
 </head>
 <body lang="es" class="home">
-<header class="main">
+  <header class="main">
+    <div class="wrapper">
+      <h1><a href="index.html">Gobierno Transparente</a></h1>
+    </div>
+  </header>
+
+  <section>
+    <h1>Cuanto faltan nuestros representantes?</h1>
+    <p>Uno pensaria que los parlamentarios ocupan sus asientos cada vez que hay sesion. Despues de todo se les paga $xx a senadores y $xx a diputados y solo tienen que asistir xx veces al año. Analizando los datos del sitio del parlamento uruguayo podemos ver que ellos faltan de un xx a un xx% de las veces que deberian asistir.</p>
+  </section>
+
   <div class="wrapper">
-    <h1><a href="index.html">Gobierno Transparente</a></h1>
+    <section class="citations">
+      <h1>Citaciones por partido</h1>
+      <div id="citations" class="chart"></div>
+    </section>
+    <section class="attendance">
+      <h1>Asistencias en el año</h1>
+      <div id="attendance" class="chart"></div>
+    </section>
   </div>
-</header>
 
-<section>
-  <h1>Cuanto faltan nuestros representantes?</h1>
-  <p>Uno pensaria que los parlamentarios ocupan sus asientos cada vez que hay sesion. Despues de todo se les paga $xx a senadores y $xx a diputados y solo tienen que asistir xx veces al año.</p>
-  <p>Analizando los datos del sitio del parlamento uruguayo podemos ver que ellos faltan de un xx a un xx% de las veces que deberian asistir.</p>
-</section>
-
-<div class="wrapper">
-  <section class="citations">
-    <h1>Citaciones por partido</h1>
+  <section class="best-attendance">
+    <h1>Parlamentarios con mejor asistencia</h1>
   </section>
-  <section class="attendance">
-    <h1>Asistencias en el año</h1>
+
+  <section class="worst-attendance">
+    <h1>Parlamentarios con peor asistencia</h1>
   </section>
-</div>
 
-<section class="best-attendance">
-  <h1>Parlamentarios con mejor asistencia</h1>
-</section>
+  <section class="attendance-records">
+    <h1>Registros de asistencia</h1>
+  </section>
 
-<section class="worst-attendance">
-  <h1>Parlamentarios con peor asistencia</h1>
-</section>
-
-<section class="attendance-records">
-  <h1>Registros de asistencia</h1>
-</section>
-
-<footer>
-  <ul class="wrapper">
-    <li><a class="about" href="about.html">Sobre Gobierno Transparente</a></li>
-    <li><a class="about" href="">Fork us on Github</a></li>
-  </ul>
-</footer>
+  <footer>
+    <ul class="wrapper">
+      <li><a class="about" href="about.html">Sobre Gobierno Transparente</a></li>
+      <li><a class="about" href="">Forkeanos en Github</a></li>
+    </ul>
+  </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+  <script src="media/javascripts/highcharts.js" type="text/javascript"></script>
+  <script src="media/javascripts/gobierno-transparente.js" type="text/javascript"></script>
 </body>
 </html>
