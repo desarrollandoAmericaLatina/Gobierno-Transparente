@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db.models import F
 from models import Absence, Citation, Session, Parliamentary, Senator, Deputy, Senator, Deputy
 
