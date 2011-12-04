@@ -44,6 +44,15 @@ def parse_periods(periods, session_chamber, name_ids):
                                                        internal_id=int(session_entry['nro']),
                                                        date=datetime.strptime(session_entry['fecha'], TIME_FMT))
 
+            for name in session_entry['Asisten']:
+                if name not in name_ids:
+                    continue
+                try:
+                    citation, c = Citation.objects.get_or_create(session=session, parliamentary=Parliamentary.objects.get(id_parliament=name_ids[name]))
+                except Parliamentary.DoesNotExist:
+                    print 'Couldnt find', name, name_ids[name], 'in the model.'
+                    continue
+
             for name in session_entry['Faltan con']:
                 if name not in name_ids:
                     continue
