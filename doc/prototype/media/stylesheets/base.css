@@ -250,16 +250,11 @@ footer li a {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  border: 1px solid transparent;
 }
 .attendance-ranking li a:hover {
   background-color: rgba(255, 255, 255, 0.6);
-  -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
-}
-.attendance-ranking li a:hover img {
-  background: transparent;
-  border: 0;
+  border: 1px solid #c9cee4;
 }
 .attendance-ranking li img {
   float: left;
