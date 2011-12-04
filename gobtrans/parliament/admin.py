@@ -4,6 +4,7 @@ from .models import (Absence, Citation, Deputy, Entry, Issue, Legislature,
                      Substitution,)
 
 from django.contrib.admin import site, ModelAdmin
+from django.utils.translation import ugettext_lazy as _
 
 
 class AbsenceAdmin(ModelAdmin):
@@ -46,9 +47,14 @@ class ParliamentaryAdmin(ModelAdmin):
     pass
 
 
+def party_parliamentaries(obj):
+    return obj.senators.all().count() + obj.deputies.all().count()
+party_parliamentaries.short_description = _(u'parliamentaries')
+
+
 class PartyAdmin(ModelAdmin):
 
-    pass
+    list_display = ('name', party_parliamentaries)
 
 
 class PeriodAdmin(ModelAdmin):
