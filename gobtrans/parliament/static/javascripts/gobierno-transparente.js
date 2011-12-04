@@ -65,8 +65,8 @@ $(document).ready(function() {
       },
       title: false,
       xAxis: {
-         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+         categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 
+            'Jul', 'Ago', 'Set', 'Oct', 'Nov', 'Dic']
 
       },
       yAxis: {
@@ -82,20 +82,9 @@ $(document).ready(function() {
       tooltip: {
          formatter: function() {
                    return '<b>'+ this.series.name +'</b><br/>'+
-               this.x +': '+ this.y +'Â°C';
+               this.x +': '+ this.y;
          }
       },
       series: attendance_data
-   });
-
-   // Fancybox
-   $("#portfolio a").fancybox({
-     'speedIn' : 600,
-     'speedOut' : 300, 
-     'transitionIn' : 'elastic',
-     'transitionOut' : 'elastic',
-     'opacity' : true,
-     'overlayShow' : false,
-     'titlePosition' : 'inside'
    });
 });
