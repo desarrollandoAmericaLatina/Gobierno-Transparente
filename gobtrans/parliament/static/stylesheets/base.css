@@ -221,11 +221,13 @@ footer {
 	width: 100%;
   overflow: auto;
 }
-footer li a {
-	float: left;
-	padding: 0.5em 1em;
-	color: #666666;
+footer a {
+	color: #526dab;
 }
+footer a:hover {
+  text-decoration: underline; 
+}
+
 
 /* Section Specific ************************************************/
 .citations {
@@ -279,7 +281,7 @@ footer li a {
   font-weight: bold;
 }
 .good {
-  color: #89A54E;
+  color: #87a43b;
 }
 .bad {
   color: #AA4643;
@@ -299,40 +301,6 @@ footer li a {
 	}
 }
 @media screen and (max-width: 700px) { 
-	header {
-		height: auto;
-		overflow: auto;
-	}
-	header h1 {
-		display: block;
-		float: none;
-	}
-	header nav {
-		float: left;
-	}
-	header nav li a {
-		border-left: 0;
-		padding-left: 0;
-	}
-	header nav li.active a {
-		background-color: inherit;
-	}
-	header nav li a:hover {
-		background-color: inherit;
-		text-decoration: underline;
-	}
-	footer {
-		position: relative;
-	}
-	footer li a {
-		background: none;
-		padding-left: 0;
-		margin: 0;
-		font-size: 0.7em;
-	}
-	footer li a.email {
-		padding-left: 0;
-	}
 	.wrapper section {
 		width: 100%;
 		float: none;
@@ -345,9 +313,5 @@ footer li a {
 .ie7 .wrapper,
 .ie7 section {
 	width: 960px;
-}
-.ie6 footer,
-.ie7 footer {
-	background-color: #f1f1f2;
 }
 
