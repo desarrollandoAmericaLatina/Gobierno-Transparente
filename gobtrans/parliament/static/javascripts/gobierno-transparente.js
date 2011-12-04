@@ -16,7 +16,7 @@ $(document).ready(function() {
       },
       title: false,
       xAxis: {
-         categories: ['Partido Blanco', 'Partido Colorado', 'Frente Amplio', 'Partido Independiente']
+         categories: citations_categories
       },
       yAxis: {
          min: 0,

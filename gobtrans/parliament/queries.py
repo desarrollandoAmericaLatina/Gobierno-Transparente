@@ -1,15 +1,35 @@
 from django.db.models import F
 from models import Absence, Citation, Session, Parliamentary, Senator, Deputy, Senator, Deputy
 
-def absence_by_party(party):
-    res = []
-    senate_absences = Absence.objects.filter(citation__session__chamber=Session.SENATE)
-    deputy_absences = Absence.objects.filter(citation__session__chamber=Session.DEPUTY)
-    for absence in senate_absences:
-        for senator in Senator.objects.filter(parliamentary=absence.citation.parliamentary, party__name=party):
-            res.append(absence)
-    for absence in deputy_absences:
-        for deputy in Deputy.objects.filter(parliamentary=absence.citation.parliamentary, party__name=party):
-            res.append(absence)
+def citations_by_party(year):
+    result = {}
 
-    return res
+    parliamentaries = Parliamentary.objects.filter(citations__session__date__year=year)
+
+    for senator in Senator.objects.filter(parliamentary__in=parliamentaries):
+        result.setdefault(senator.party.name, 0)
+        result[senator.party.name] += 1
+
+    for deputy in Deputy.objects.filter(parliamentary__in=parliamentaries):
+        result.setdefault(deputy.party.name, 0)
+        result[deputy.party.name] += 1
+
+    return result
+
+
+def absence_by_party(year):
+    result = {}
+
+    absences = Absence.objects.filter(citation__session__date__year=year)
+    parliamentaries = Parliamentary.objects.filter(citations__absences__in=absences)
+
+    for senator in Senator.objects.filter(parliamentary__in=parliamentaries):
+        result.setdefault(senator.party.name, 0)
+        result[senator.party.name] += 1
+
+    for deputy in Deputy.objects.filter(parliamentary__in=parliamentaries):
+        result.setdefault(deputy.party.name, 0)
+        result[deputy.party.name] += 1
+
+    return result
+
